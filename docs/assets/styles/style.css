@@ -163,7 +163,7 @@ body:after,body:before{
   height:1.5em;
   line-height:1.5em;
   font-size:.8em;
-  top:0;
+  bottom:0;
   display:block;
   margin:0;
   text-align:center;

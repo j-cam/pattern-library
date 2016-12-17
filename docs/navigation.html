@@ -18,6 +18,73 @@
         <link href="assets/styles/style.css" rel="stylesheet">
 
         <script src="assets/scripts/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+
+        <style>
+        #module-list {
+            background-color:#e1e1e1;
+            padding: 2em;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* align items in Main Axis */
+            align-items: stretch; /* align items in Cross Axis */
+            align-content: stretch; /* Extra space in Cross Axis */
+        }
+        #module-list h1 {
+          text-align: center;
+          color: #ff4444;
+        }
+        #module-list a {
+          display: block;
+          padding:20px 40px;
+          text-decoration: underline;
+          color: #ff4444;
+          transition: all 0.3s ease-in-out;
+        }
+        #module-list  a:hover {cursor: pointer; color: #fff;transition: all 0.3s ease-in-out;}
+        #module-list  ul {
+          width: 100%;
+          margin:0 auto;
+          list-style: none;
+          text-align: center;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+        #module-list li {
+            display: flex;
+            padding: 0.5em;
+            width: 100%;
+            background-color:#e1e1e1;
+          transition: all 0.3s ease-in-out;
+        }
+        @media all and (min-width: 40em) {
+           #module-list li {
+            width: 50%;
+          }
+        }
+        @media all and (min-width: 60em) {
+           #module-list li {
+            width: 33.33%;
+          }
+        }
+        #module-list li a:hover {
+            background-color:#ff4444;
+            color:  #fff;
+            transition: all 0.3s ease-in-out;
+        }
+        #module-list .content {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            padding: 1em;
+            width: 100%;
+        }
+        </style>
+
+
     </head>
 
     <body>
@@ -190,6 +257,59 @@
         </div>
 </nav>
 
+
+
+
+    
+
+    <div id="module-list">
+        <h1>Module List</h1>
+        <ul>
+        
+          <li>
+                <div class="content">
+                    <a href='html-tags.html'>HTML Tags</a>
+                </div>
+            </li>
+        
+          <li>
+                <div class="content">
+                    <a href='browserupgrade.html'>Browser Upgrade</a>
+                </div>
+            </li>
+        
+          <li>
+                <div class="content">
+                    <a href='navigation.html'>Navigation</a>
+                </div>
+            </li>
+        
+          <li>
+                <div class="content">
+                    <a href='banner.html'>Banner</a>
+                </div>
+            </li>
+        
+          <li>
+                <div class="content">
+                    <a href='hero.html'>Hero</a>
+                </div>
+            </li>
+        
+          <li>
+                <div class="content">
+                    <a href='info-panel.html'>Info Panel</a>
+                </div>
+            </li>
+        
+          <li>
+                <div class="content">
+                    <a href='tile.html'>Tile</a>
+                </div>
+            </li>
+        
+        </ul>
+    </div>
 
     <script type="text/javascript" src="assets/scripts/main.js"></script>
 
