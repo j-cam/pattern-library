@@ -1,0 +1,57 @@
+.banner {
+    display: block;
+    position: relative;
+    &__image {
+        width: 100%;
+        height: auto;
+        border: 0;
+        vertical-align: bottom;
+        zoom: 1;
+    }
+    &__caption {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        overflow-y: hidden;/* just in case */
+    }
+    &__heading {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 5%;
+        margin: 0 auto;
+        font-weight: $fw_bold;
+        font-size: rem(98px);
+        font-family: $sans;
+
+        line-height: 1;
+
+        @media ($desktop_xlarge) {
+            font-size: rem(70px);
+        }
+        @media ($desktop_small) {
+            font-size: rem(60px);
+        }
+        @media ($tablet) {
+            font-size: rem(50px);
+        }
+        @media ($mobile_xlarge) {
+            padding: 0 5%;
+            font-size: rem(40px);
+        }
+        @media ($mobile_medium) {
+            font-size: rem(30px);
+        }
+        @media ($mobile_small) {
+            font-size: rem(22px);
+        }
+    }
+}

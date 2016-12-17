@@ -1,0 +1,23 @@
+<!-- Snippet end: product.wrapper-top -->
+<article class="product-single" itemscope itemtype="http://schema.org/Product">
+    <#
+         
+    #>
+    <div class="product-single__flex-row product-single__flex-row--photos">
+
+        <div class="product-single__photos">
+          <% include "modules/product-slider.njk" %>
+        </div><!-- end: product-single__photos -->
+
+        <div class="product-single__options">
+          <% include "modules/product-options.njk" %>
+        </div><!-- end: product-single__options -->
+
+    </div>
+
+    <div class="product-single__flex-row">
+      <% include "modules/product-info.njk" %>
+    </div>
+
+    </div><!-- end: product-single__grid -->
+</article><!-- module end: product single -->

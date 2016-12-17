@@ -1,0 +1,91 @@
+<!-- index.njk -->
+{% extends "layout.njk" %}
+
+
+{% block content %}
+<style>
+body {
+  padding-bottom: 100px;
+}
+h1 {
+  text-align: center;
+  color: #ff4444;
+}
+a {
+  display: block;
+  padding:20px 40px;
+  text-decoration: underline;
+  color: #ff4444;
+  transition: all 0.3s ease-in-out;
+}
+a:hover {cursor: pointer; color: #fff;transition: all 0.3s ease-in-out;}
+ul {
+  width: 100%;
+  margin:0 auto;
+  list-style: none;
+  text-align: center;
+}
+li {
+  width: 25%;
+  display: inline-block;
+  background-color:#e1e1e1;
+  border-radius: 4px;
+  border: thin solid #B7B9B8;
+  margin-bottom: 2px;
+  transition: all 0.3s ease-in-out;
+}
+li:hover {
+    background-color:#ff4444;
+    transition: all 0.3s ease-in-out;
+}
+</style>
+
+{% set base = [
+    {elements: ""}
+  ]
+%}
+
+<h1>Base</h1>
+  <ul>
+    <li>
+    <a href='base/html5-tags.html'>HTML5 Element Selectors</a>
+    </li>
+  </ul>
+
+<br>
+<hr>
+<br>
+
+
+{% set components =
+  [
+    {name: "Browser Upgrade", file: "browserupgrade"},
+    {name: "Navigation", file: "navigation"},
+    {name: "Banner", file: "banner"},
+    {name: "Section Nav", file: "section-nav"},
+    {name: "Hero", file: "hero"},
+    {name: "Info Panel", file: "info-panel"},
+    {name: "Tile", file: "tile"},
+    {name: "Product Slider", file: "product-slider"},
+    {name: "Product", file: "product"},
+    {name: "Product Collection", file: "product-collection"},
+    {name: "Post Collection", file: "post-collection"},
+    {name: "Post", file: "post"},
+    {name: "Pagination", file: "pagination"},
+    {name: "Footer", file: "footer"},
+    {name: "All The Things", file: "all"}
+
+  ]
+%}
+
+
+<h1>Modules</h1>
+<ul>
+{% for component in components %}
+  <li>
+  <a href='{{ component.file + ".html" }}'>{{ component.name }}</a>
+</li>
+{% endfor %}
+</ul>
+
+{% endblock %}

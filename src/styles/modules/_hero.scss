@@ -1,0 +1,58 @@
+.hero {
+    display: block;
+    position: relative;
+
+    &__link {
+        width: 100%;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    &__image,
+    &__image-mobile {
+        width: 100%;
+        height: auto;
+        border: 0;
+        vertical-align: bottom;
+        zoom: 1;
+    }
+    &__caption {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        overflow-y: hidden;
+        /* just in case */
+    }
+    &__heading {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        width: 100%;
+        max-width: 1050px;
+        padding: 0 8%;
+        margin: 0 auto;
+        color: $hero_headline_color;
+        line-height: 1;
+        font-weight: $fw_bold;
+        font-size: rem(98px);
+        @media ($desktop_large) {
+            font-size: rem(80px);
+        }
+        @media ($desktop) {
+            font-size: rem(60px);
+        }
+        @media ($mobile_large) {
+            font-size: rem(50px);
+        }
+        @media ($mobile_small) {
+            padding: 0 5%;
+            font-size: rem(40px);
+        }
+    }
+}

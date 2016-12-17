@@ -1,0 +1,444 @@
+/*============================================================================
+  #Site Nav and Dropdowns
+==============================================================================*/
+#NavDrawer button {
+    background: $navbar_bg_color;
+}
+.nav-bar {
+    background-color: $navbar_bg_color;
+    padding: 18px 0;
+    @media ($tablet) {
+        padding: 0 0;
+    }
+    .wrapper {
+        @include clearfix();
+        margin: 0 auto;
+        padding: 0 $gutter_percent;
+        @media ($desktop_large) {
+           //padding: 0 ($gutter_percent / 2);
+        }
+        @media ($tablet) {
+        padding: 0 percentage(20px / $site_max_width);
+        }
+    }
+    button {
+        background: $navbar_bg_color;
+    }
+}
+
+.nav-bar__flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 0;
+}
+
+.nav-bar__logo-block {}
+.nav-bar__nav-block {}
+.nav-bar__account-block {}
+
+.site-nav {
+    display: table;
+    // cursor: default;
+    margin: 0 auto;
+    line-height: 1.6;
+    li {
+        margin: 0;
+        display: block;
+    }
+    > li {
+        position: relative;
+        display: inline-block;
+    }
+}
+
+
+/*================ Home to hamburger and cart that toggle drawers ================*/
+
+.site-nav--mobile {
+    @extend .site-nav;
+    display: inline-flex;
+    margin: 0;
+}
+
+.hamburger-button {
+    // height: 46px;
+    padding: 10px;
+    display: table;
+    vertical-align: middle;
+    img {
+        width: 20px;
+        height: 14px;
+        display: block;
+        vertical-align: middle;
+    }
+    span {
+        @extend %visuallyhidden
+    }
+}
+
+.site-nav__link {
+    display: block;
+    text-decoration: none;
+    text-transform: lowercase;
+    //padding: $gutter / 2;
+    padding: 18px;
+    white-space: nowrap;
+    color: $navbar_txt_color;
+    transition: color 0.15s ease-in-out;
+    font-size: rem(20px);
+    font-family: $sans;
+    font-weight: $fw_regular;
+    @media ($desktop_large) {
+        font-size: rem(16px);
+        // padding-left: 24px;
+        padding-right: 0;
+    }
+    @media ($tablet) {
+        padding: 0;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        color: $red;
+    }
+    .icon-arrow-down {
+        position: relative;
+        top: -2px;
+        font-size: 10px;
+        padding-left: $gutter / 4;
+    }
+    .site-nav--active > & {
+        color: $navbar_link_active;
+    }
+    .site-nav--mobile & {
+        display: inline-block;
+        font-size: rem(12px);
+        padding: 10px;
+        &:hover {
+            color: $darkest;
+        }
+    }
+}
+
+
+/*================ Dropdowns ================*/
+
+.site-nav__dropdown {
+    min-width: 218px;
+    display: none;
+    position: absolute;
+    left: -12px;
+    margin: 0;
+    padding-bottom: 20px;
+    background-color: $navbar_bg_color;
+    z-index: z('nav-dropdown');
+    @media ($desktop_large) {
+        left: 0;
+    }
+    .supports-no-touch .site-nav--has-dropdown:hover &,
+    .site-nav--has-dropdown.nav-hover &,
+    .nav-focus + & {
+        display: block;
+    }
+    .site-nav__link {
+        font-size: rem(15px);
+        line-height: 1;
+        font-weight: $fw_regular;
+        padding: 2px 19px 10px 30px;
+        @media ($desktop_large) {
+            padding-left: 24px;
+        }
+    }
+    a {
+        background-color: $navbar_bg_color;
+        &:hover,
+        &:active,
+        &:focus {
+            color: $subnav_highlight_color;
+        }
+    }
+}
+
+
+/*================ Search bar in header ================*/
+
+.nav-search {
+    position: relative;
+    padding: 10px 0;
+    @media ($tablet) {
+        padding: 0 0 ($gutter / 2);
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+
+/*================ Account Links ================*/
+
+.account-links {
+    position: relative;
+    display: inline-block;
+    @media ($desktop_large) {
+        padding-left: 20px;
+    }
+    &__list {
+        list-style: none;
+    }
+    &__item {
+        position: relative;
+        display: inline-block
+    }
+    &__link,
+    &__item a {
+        display: block;
+        text-decoration: none;
+        text-transform: lowercase;
+        //padding: $gutter / 2;
+        padding: 18px 10px;
+        white-space: nowrap;
+        color: $navbar_txt_color;
+        font-size: rem(15px);
+        @media ($desktop_large) {
+            font-size: rem(13px);
+            padding: 18px 0 18px 10px;
+        }
+    }
+}
+
+
+/*============================================================================
+  #Mobile Nav
+  - List of items inside the mobile drawer
+==============================================================================*/
+
+.mobile-nav {
+    // Negative of .drawer left/right padding for full-width link tap area
+    margin: (-$gutter / 2) (-$gutter / 2) 0 (-$gutter / 2);
+    li {
+        margin-bottom: 0;
+    }
+}
+
+.mobile-nav__item {
+    position: relative;
+    display: block;
+    // Background color on top level items so there is no
+    // element overlap on subnav's CSS toggle animation
+    .mobile-nav > & {
+        background-color: $drawer_bg_color;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: $gutter / 2;
+        right: $gutter / 2;
+    }
+    .mobile-nav > &:last-child:after {
+        display: none;
+    }
+}
+
+// Login/logout links can't have a class on them, so style <a> element
+.mobile-nav__item a {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    text-transform: lowercase;
+    font-size: rem(20px);
+    font-family: $sans;
+    font-weight: $fw_regular;
+}
+
+.mobile-nav__item a,
+.mobile-nav__toggle button {
+    color: $drawer_text_color;
+    padding: 15px ($gutter / 2);
+    text-decoration: none;
+    line-height: 1;
+    &:hover,
+    &:active,
+    &:focus {}
+    &:active,
+    &:focus {}
+}
+
+.mobile-nav__item--active {
+    font-weight: bold;
+}
+
+.mobile-nav__has-sublist {
+    display: table;
+    width: 100%;
+    .mobile-nav__link {
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+    }
+}
+
+.mobile-nav__toggle,
+.mobile-nav__toggle-arrow {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.mobile-nav__toggle-arrow img {
+    width: 17px;
+    height: 10px;
+}
+
+.mobile-nav__toggle-open {
+    .mobile-nav--expanded & {
+        display: none;
+    }
+}
+
+.mobile-nav__toggle-close {
+    display: none;
+    .mobile-nav--expanded & {
+        display: block;
+    }
+}
+
+.mobile-nav__sublist {
+    margin: 0;
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all 300ms cubic-bezier(0.57, 0.06, 0.05, 0.95);
+    backface-visibility: hidden;
+    .mobile-nav--expanded + & {
+        visibility: visible;
+        max-height: 700px;
+        transition: all 700ms cubic-bezier(0.57, 0.06, 0.05, 0.95);
+    }
+    .mobile-nav__item:after {
+        top: 0;
+        bottom: auto;
+    }
+    .mobile-nav__link {
+        padding-left: 45px;
+        display: table;
+        vertical-align: middle;
+        width: 100%;
+    }
+}
+
+
+/*============================================================================
+  #Drawers
+==============================================================================*/
+
+.js-drawer-open {
+    overflow: hidden;
+    height: 100%;
+}
+
+.drawer {
+    @include promote-layer();
+    display: none;
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    top: 0;
+    bottom: 0;
+    padding: 0 ($gutter / 2) ($gutter / 2);
+    max-width: 100%;
+    z-index: z('drawer');
+    color: $drawer_text_color;
+    background-color: $drawer_bg_color;
+    transition: $drawer_transition;
+    a {
+        color: $drawer_text_color;
+        &:hover,
+        &:focus {}
+    }
+    input,
+    textarea {
+        border-color: $drawer_border_color;
+    }
+}
+
+.drawer--left {
+    width: $drawer_nav_width;
+    left: -$drawer_nav_width;
+    border-right: 1px solid $drawer_border_color;
+    .js-drawer-open-left & {
+        display: block;
+        transform: translateX($drawer_nav_width);
+        .lt-ie9 & {
+            left: 0;
+        }
+    }
+}
+
+.drawer--right {
+    width: $drawer_cart_width;
+    right: -$drawer_cart_width;
+    border-left: 1px solid $drawer_border_color;
+    .js-drawer-open-right & {
+        display: block;
+        transform: translateX(-$drawer_cart_width);
+        .lt-ie9 & {
+            right: 0;
+        }
+    }
+}
+
+#PageContainer {
+    overflow: hidden;
+}
+
+.is-moved-by-drawer {
+    @include promote-layer();
+    transition: $drawer_transition;
+    .js-drawer-open-left & {
+        transform: translateX($drawer_nav_width);
+    }
+    .js-drawer-open-right & {
+        transform: translateX(-$drawer_cart_width);
+    }
+}
+
+.drawer__header {
+    display: table;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    margin-bottom: $gutter / 2;
+}
+
+.drawer__title,
+.drawer__close {
+    vertical-align: top;
+}
+
+.drawer__title {
+    width: 100%;
+}
+
+.drawer__close {
+    text-align: left;
+    font-size: em(18px);
+}
+
+.drawer__close button {
+    position: absolute;
+    width: 61px;
+    height: 65px;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    img {
+        width: 21px;
+        height: 21px;
+        vertical-align: top;
+    }
+    &:active,
+    &:focus {}
+}

@@ -1,0 +1,163 @@
+.tiles {
+  @include clearfix();
+}
+.tile {
+    width: 100%;
+
+    &__box {
+      position: relative;
+      width: 50%;
+      overflow: hidden;
+      float: left;
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+      &--grey {
+        background-color: $grey; }
+      &--pink {
+        background-color: $red; }
+      &--blue {
+        background-color: $blue; }
+        /* Layout: single column shift */
+        @media ($below_tablet) {
+          width: 100%;
+          height: auto;
+          &:before {
+            padding: 0;
+          }
+        }
+    }
+    &__content-wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      /* Layout: single column shift */
+      @media ($below_tablet) {
+        position: relative;
+      }
+    }
+    &__table {
+      display: table;
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      max-height:100%;
+    }
+    &__table-cell {
+      display: table-cell;
+      border-collapse: collapse;
+      text-align: center;
+      vertical-align: middle;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      max-height:100%;
+      overflow: hidden;
+    }
+    &__table-cell--has-text {
+      padding: 0 percentage(60px / ($site_max_width / 2));
+      color: $white;
+      /* Layout: single column shift */
+      @media ($below_tablet) {
+        padding: percentage(60px / ($site_max_width / 2));
+      }
+    }
+    &__image {
+        width: 101%;
+    }
+
+
+    &__number,
+    &__title,
+    &__info {
+      display: block;
+      max-width: 100%;
+      margin: 0 0 0 0;
+    }
+    &__number {
+      font-weight: $fw_black;
+    }
+    &__title {
+      font-weight: $fw_bold;
+    }
+    &__number {
+        font-size: rem(20px);
+        line-height: 1;
+        @media( $desktop_xlarge ) {
+          font-size: rem(18px);
+        }
+    }
+    &__title {
+      margin: percentage(25px / $site_max_width) auto percentage(40px / $site_max_width) auto;
+      font-size: rem(64px);
+      line-height: line-height(64px, 64px);
+      @media( $desktop_xlarge ) {
+        font-size: rem(54px);
+      }
+      @media( $desktop_large ) {
+        font-size: rem(44px);
+      }
+      @media( $desktop_small ) {
+        font-size: rem(38px);
+      }
+      @media( $desktop_medium ) {
+        font-size: rem(32px);
+      }
+      @media( $desktop_xsmall ) {
+        font-size: rem(28px);
+      }
+    }
+    &__info {
+
+      a {
+        color: $red;
+      }
+      @media( $desktop_medium ) {
+        font-size: rem(14px);
+      }
+
+    }
+
+    &__video-link-wrap {
+      width: 100%;
+      height: 100%;
+      display: table;
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      vertical-align: middle;
+      text-align: center;
+      /* Layout: single column shift */
+      @media ($below_tablet) {
+        display: block;
+        padding: 38% 0;
+      }
+    }
+
+    &__video-link {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      color: $white;
+      text-decoration: none;
+      font-weight: $fw_bold;
+      &:before {
+        content:'';
+        display: block;
+        //@include retina-sprite($play-btn-group);
+        // width: percentage( 72px / $site_max_width);
+        // height: percentage( 72px / $site_max_width);
+        margin: 0 auto 10px auto;
+        transition: 0.3s ease-in-out;
+      }
+      /* Layout: single column shift */
+      @media ($below_tablet) {
+        display: block;
+      }
+    }
+
+}

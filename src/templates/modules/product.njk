@@ -1,0 +1,29 @@
+<!-- Snippet end: product.wrapper-top -->
+<article class="product-single" itemscope itemtype="http://schema.org/Product">
+    <#
+    {#
+    <meta itemprop="url" content="{{ shop.url }}{{ product.url }}"> #} {#
+    <meta itemprop="image" content="{{ product.featured_image.src | img_url: 'grande' }}"> #} {#
+    <meta itemprop="brand" content="Octopus" /> #} {#
+    <meta itemprop="category" content="Surfing" /> #} {#
+    <meta itemprop="priceCurrency" content="{{ shop.currency }}"> #} {#
+    <link itemprop="availability" href="http://schema.org/<% if product.available %>InStock<% else %>OutOfStock<% endif %>"> #}
+    #>
+    <div class="product-single__flex-row product-single__flex-row--photos">
+
+        <div class="product-single__photos">
+          <% include "modules/product-slider.njk" %>
+        </div><!-- end: product-single__photos -->
+
+        <div class="product-single__options">
+          <% include "modules/product-options.njk" %>
+        </div><!-- end: product-single__options -->
+
+    </div>
+
+    <div class="product-single__flex-row">
+      <% include "modules/product-info.njk" %>
+    </div>
+
+    </div><!-- end: product-single__grid -->
+</article><!-- module end: product single -->

@@ -1,0 +1,167 @@
+{% extends "layout.njk" %}
+{% block content %}
+<div id="NavDrawer" class="drawer drawer--left">
+    <div class="drawer__header">
+        <div class="drawer__close js-drawer-close">
+            <button type="button" class="close-menu-button js-drawer-open-left" aria-controls="NavDrawer" aria-expanded="false">
+                <img src="/assets/images/close-menu-button.svg" alt="" />
+            </button>
+        </div>
+        <div class="branding__logo-menu">
+            <a href="#"><img src="/assets/images/yip-menu-logo.svg" alt="" /></a>
+        </div>
+    </div>
+    <!-- begin mobile-nav -->
+    <ul class="mobile-nav">
+        <li class="mobile-nav__item" aria-haspopup="true">
+            <div class="mobile-nav__has-sublist">
+                <a href="#" class="mobile-nav__link">Shop the Collection</a>
+                <div class="mobile-nav__toggle">
+                    <button type="button" class="mobile-nav__toggle-open mobile-nav__toggle-arrow">
+                        <img src="/assets/images/sub-nav-arrow.svg" alt="expand" />
+                    </button>
+                    <button type="button" class="mobile-nav__toggle-close mobile-nav__toggle-arrow">
+                        <img src="/assets/images/sub-nav-arrow.svg" alt="collapse" />
+                    </button>
+                </div>
+            </div>
+            <ul class="mobile-nav__sublist">
+                <li class="mobile-nav__item ">
+                    <a href="#" class="mobile-nav__link">Tops</a>
+                </li>
+                <li class="mobile-nav__item ">
+                    <a href="#" class="mobile-nav__link">Bottoms</a>
+                </li>
+                <li class="mobile-nav__item ">
+                    <a href="#" class="mobile-nav__link">Dresses</a>
+                </li>
+            </ul>
+        </li>
+        <li class="mobile-nav__item">
+            <a href="#" class="mobile-nav__link">Our Story</a>
+        </li>
+        <li class="mobile-nav__item">
+            <a href="journal" class="mobile-nav__link">Journal</a>
+        </li>
+        <li class="mobile-nav__item" aria-haspopup="true">
+            <div class="mobile-nav__has-sublist">
+                <a href="#" class="mobile-nav__link">Connect</a>
+                <div class="mobile-nav__toggle">
+                    <button type="button" class="mobile-nav__toggle-open mobile-nav__toggle-arrow">
+                        <img src="/assets/images/sub-nav-arrow.svg" alt="expand" />
+                    </button>
+                    <button type="button" class="mobile-nav__toggle-close mobile-nav__toggle-arrow">
+                        <img src="/assets/images/sub-nav-arrow.svg" alt="collapse" />
+                    </button>
+                </div>
+            </div>
+            <ul class="mobile-nav__sublist">
+                <li class="mobile-nav__item  mobile-nav__item--active">
+                    <a href="#" class="mobile-nav__link">Contact</a>
+                </li>
+                <li class="mobile-nav__item ">
+                    <a href="#" class="mobile-nav__link">Common Questions</a>
+                </li>
+                <li class="mobile-nav__item ">
+                    <a href="#" class="mobile-nav__link">Returns</a>
+                </li>
+                <li class="mobile-nav__item ">
+                    <a href="#" class="mobile-nav__link">Terms of service</a>
+                </li>
+            </ul>
+        </li>
+        <li class="mobile-nav__item ">
+            <a href="#" class="mobile-nav__link">Cart (76)</a>
+        </li>
+    </ul>
+    <!-- //mobile-nav -->
+</div>
+<nav class="nav-bar" role="navigation">
+    <div class="wrapper">
+        <div class="tablet-down--hide">
+            <div class="nav-bar__flex-container">
+                <div class="nav-bar__logo-block">
+                    <h1 class="branding__logo-desktop"><a href="/">Youth Independent Party</a></h1>
+                </div>
+                <div class="nav-bar__nav-block">
+                    <!-- begin site-nav -->
+                    <ul class="site-nav" id="AccessibleNav">
+                        <li class="site-nav--has-dropdown site-nav--active" aria-haspopup="true">
+                            <a href="#" class="site-nav__link">
+                        Shop the Collection
+                      </a>
+                            <ul class="site-nav__dropdown">
+                                <li>
+                                    <a href="#" class="site-nav__link">Tops</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="site-nav__link">Bottoms</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="site-nav__link">Dresses</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="site-nav__link">Our Story</a>
+                        </li>
+                        <li>
+                            <a href="journal" class="site-nav__link">Journal</a>
+                        </li>
+                        <li class="site-nav--has-dropdown" aria-haspopup="true">
+                            <a href="#" class="site-nav__link">
+                        Connect
+                      </a>
+                            <ul class="site-nav__dropdown">
+                                <li>
+                                    <a href="contact" class="site-nav__link">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="common-questions" class="site-nav__link">Common Questions</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="site-nav__link">Returns</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="site-nav__link">Terms of service</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-bar__account-block">
+                    <div id="customerAccount" class="account-links">
+                        <ul class="account-links__list">
+                            <li class="account-links__item">
+                                <a class="account-links__link my-account-link" href="#">Account</a>
+                            </li>
+                            <li class="account-links__item">
+                                <a href="/cart" class="account-links__link site-header__cart-toggle js-drawer-open-right" aria-controls="CartDrawer" aria-expanded="false">
+                            Cart (76)
+                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- //nav-bar__flex-container -->
+        </div>
+        <div class="desktop--hide tablet-down--show">
+            <div class="nav-bar__flex-container">
+                <div class="site-nav--mobile">
+                    <button type="button" class="hamburger-button js-drawer-open-left" aria-controls="NavDrawer" aria-expanded="false">
+                        <img src="/assets/images/hamburger.svg" alt="menu" />
+                    </button>
+                </div>
+                <div class="branding__logo-mobile">
+                    <a href="#"><img src="/assets/images/yip-mobile-logo.svg" alt="Youth Independent Party" /></a>
+                </div>
+                <div class="site-nav--mobile">
+                    <a href="/cart" class="js-drawer-open-right site-nav__link" aria-controls="CartDrawer" aria-expanded="false">
+                        (76)
+                    </a>
+                </div>
+            </div>
+        </div>
+</nav>
+{% endblock %}

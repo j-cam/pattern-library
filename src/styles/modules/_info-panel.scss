@@ -1,0 +1,149 @@
+.info-panel {
+    display: block;
+    position: relative;
+    max-height: 100%;
+    overflow: hidden;
+    /**
+     * Layout
+     */
+    &__image {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        border: 0;
+        vertical-align: bottom;
+        zoom: 1;
+    }
+    &__caption,
+    &__content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: 50%; // Forms 2 rows
+    }
+    &__caption {
+        justify-content: flex-end; // Aligns to the bottom
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+    &__content {
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding: 20px $gutter;
+    }
+    /**
+     * Layout Shift
+     * The module sitches to two sections
+     * at this breakpoint
+     *
+     * This is the best guess to get the heading to center
+     * vertically. There is a whole container that we don't know the
+     * height of because the content could be longer at some point.
+     * But it didn't break by adding 4x the dummy text during development...
+     */
+    @media ($mobile_large) {
+      &__caption {
+        padding-top: 18%; // Magic guess
+        height: auto;
+      }
+      &__content {
+        position: relative;
+        top: 100%; // push it below the image and caption
+      }
+    }
+
+
+
+
+    /**
+     * Typography
+     */
+
+    &__label {
+        color: $hero_headline_color;
+        line-height: 1;
+        font-weight: $fw_bold;
+        font-size: rem(20px);
+    }
+    &__heading {
+        color: $hero_headline_color;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        font-weight: $fw_bold;
+        font-size: rem(98px);
+    }
+    &__info {
+        width: 100%;
+        max-width: 640px;
+
+        color: $hero_headline_color;
+        line-height: 1;
+        margin: 0 auto 20px auto;
+        padding: 0;
+        font-weight: $fw_regular;
+        font-size: rem(15px);
+    }
+    &__link {
+        color: $red;
+        line-height: 1;
+        font-weight: $fw_bold;
+        text-decoration: none;
+        font-size: rem(20px);
+    }
+
+    @media ($desktop_xlarge) {
+        &__heading {
+            font-size: rem(70px);
+        }
+    }
+    @media ($desktop_small) {
+        &__heading {
+            font-size: rem(60px);
+        }
+    }
+    @media ($tablet) {
+        &__heading {
+            font-size: rem(50px);
+        }
+    }
+    /**
+     * Layout Shift: Typography
+     * The module sitches to two sections
+     * at this breakpoint
+     */
+    @media ($mobile_large) {
+        &__heading {
+            font-size: rem(40px);
+        }
+        &__content {
+          padding-bottom: 0;
+          padding-left: ($gutter / 2);
+          padding-right: ($gutter / 2);
+          margin-bottom: 40px;
+        }
+        &__info {
+          color: $body_txt_color;
+        }
+        &__info,
+        &__link {
+          line-height: $base_line-height;
+          font-size: rem(12px)
+        }
+    }
+
+    @media ($mobile_medium) {
+        &__heading {
+            font-size: rem(30px);
+        }
+    }
+    @media ($mobile_small) {
+        &__heading {
+            font-size: rem(22px);
+        }
+    }
+}

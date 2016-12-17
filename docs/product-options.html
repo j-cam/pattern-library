@@ -1,0 +1,138 @@
+<div class="product-options">
+
+    <div class="product-options__header">
+        <h1 class="product-options__name" itemprop="name">grumpy little cardigan – dark grey heather</h1>
+        <span class="product-options__price" itemprop="price">$24</span>
+    </div>
+
+    <form  id="AddToCartForm" class="product-options__form" action="/cart/add" method="post" enctype="multipart/form-data">
+
+            <div id="colorOptions" class="product-options__group product-options__color">
+                <div class="product-options__header">
+                    <span class="product-options__header-label">Color: <span class="label--value">grey heather</span>
+                </div>
+                <#  #>
+                <div data-value="color-option-1" class="option color-option color-option-1 available">
+                    <input id="color-1" type="radio" name="option-0" value="color-option-1" checked="">
+                    <label for="color-1">
+                        <span><img src="/assets/color-option-1.jpg" alt=""></span>
+                    </label>
+                </div>
+                <div data-value="color-option-2" class="option color-option color-option-2 available">
+                    <input id="color-2" type="radio" name="option-0" value="color-option-2">
+                    <label for="color-2">
+                        <span><img src="/assets/color-option-2.jpg" alt=""></span>
+                    </label>
+                </div>
+                <div data-value="color-option-3" class="option color-option color-option-3 available">
+                    <input id="color-3" type="radio" name="option-0" value="color-option-3">
+                    <label for="color-3">
+                        <span><img src="/assets/color-option-3.jpg" alt=""></span>
+                    </label>
+                </div>
+                <div data-value="color-option-4" class="option color-option color-option-4 available">
+                    <input id="color-4" type="radio" name="option-0" value="color-option-4">
+                    <label for="color-4">
+                        <span><img src="/assets/color-option-4.jpg" alt=""></span>
+                    </label>
+                </div>
+                <div data-value="color-option-5" class="option color-option color-option-5 available">
+                    <input id="color-5" type="radio" name="option-0" value="color-option-5">
+                    <label for="color-5">
+                       <span><img src="/assets/color-option-5.jpg" alt=""></span>
+                    </label>
+                </div>
+                <div data-value="color-option-6" class="option color-option color-option-6 available">
+                    <input id="color-6" type="radio" name="option-0" value="color-option-6">
+                    <label for="color-6">
+                        <span><img src="/assets/color-option-6.jpg" alt=""></span>
+                    </label>
+                </div>
+            </div><!-- end product-options__color -->
+
+
+            <div class="selector-wrapper" style="display: none;">
+                <label for="product-select-option-0">Size</label>
+                <select class="single-option-selector" data-option="option1" id="product-select-option-0">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+            </div>
+
+            <div class="product-options__group product-options__size" data-option-index="1">
+                <div class="product-options__header">
+                    <span class="product-options__header-label">Select Size | <a data-remodal-target="modal">size chart</a></span>
+                </div>
+
+                    <div data-value="1-2" class="option size-option 1-2 available">
+                        <input id="size-1-1-2" type="radio" name="option-1" value="1-2" checked="">
+                        <label for="size-1-1-2">
+                            1/2
+                        </label>
+                    </div>
+                    <div data-value="3-4" class="option size-option 3-4 available">
+                        <input id="size-1-3-4" type="radio" name="option-1" value="3-4">
+                        <label for="size-1-3-4">
+                            3/4
+                        </label>
+                    </div>
+                    <div data-value="4-5" class="option size-option 4-5 available">
+                        <input id="size-1-4-5" type="radio" name="option-1" value="4-5">
+                        <label for="size-1-4-5">
+                            4/5
+                        </label>
+                    </div>
+                    <div data-value="5-6" class="option size-option 5-6 available">
+                        <input id="size-1-5-6" type="radio" name="option-1" value="5-6">
+                        <label for="size-1-5-6">
+                            5/6
+                        </label>
+                    </div>
+                    <div data-value="7-8" class="option size-option 7-8 available">
+                        <input id="size-1-7-8" type="radio" name="option-1" value="7-8">
+                        <label for="size-1-7-8">
+                            7/8
+                        </label>
+                    </div>
+                    <div data-value="9-10" class="option size-option 9-10 available">
+                        <input id="size-1-9-10" type="radio" name="option-1" value="9-10">
+                        <label for="size-1-9-10">
+                            9/10
+                        </label>
+                    </div>
+
+            </div>
+
+            <div class="selector-wrapper selector-wrapper--hidden">
+            <label>Quantity</label>
+            <input id="quantity" type="hidden" name="quantity" value="1" min="1" class="tc item-quantity">
+            </div>
+
+            <button type="submit" name="add" id="add" class="product-options__submit">Add to Cart</button>
+    </form>
+
+    <div class="share share--product-single">
+
+        <span class="share__list">
+            <span class="share__list-label">share: </span>
+            <a class="share__item share__item--facebook" href="#"></a>
+            <a class="share__item share__item--twitter" href="#"></a>
+            <a class="share__item share__item--pinterest" href="#"></a>
+        </span>
+    </div>
+
+
+</div><!-- block end: product-options -->
+
+
+<div class="remodal" data-remodal-id="modal">
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <h1>Remodal</h1>
+  <p>
+    Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+  </p>
+  <br>
+  <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+  <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+</div>
