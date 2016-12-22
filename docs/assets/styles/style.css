@@ -585,18 +585,104 @@ table tbody tr:last-child td,table tbody tr:last-child th{
 .banner__heading{
   display:inline-block;
   vertical-align:middle;
+  text-align:center;
   width:100%;
   max-width:100%;
   padding:0 5%;
   margin:0 auto;
   font-weight:700;
   font-size:6.125rem;
+  font-family:Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,Helvetica Neue,Helvetica,sans-serif;
   line-height:1;
 }
 
-.banner__heading,.browserupgrade{
-  text-align:center;
-  font-family:Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,Helvetica Neue,Helvetica,sans-serif;
+h1.branding__logo-desktop{
+  line-height:0;
+  font-size:1em;
+  font-weight:400;
+}
+
+.branding__logo-desktop{
+  background-image:url('{{ "yip-navbar-logo.svg" | asset_url }}');
+  background-repeat:no-repeat;
+  background-position:0;
+  background-size:contain;
+  max-width:199px;
+  height:74px;
+  margin:0;
+  line-height:0;
+  font-size:1em;
+}
+
+.branding__logo-desktop a{
+  text-decoration:none;
+  color:#f44;
+  display:block;
+  width:100%;
+  height:100%;
+  white-space:normal;
+  background-color:transparent;
+  border:0;
+  overflow:hidden;
+  *text-indent:-9999px;
+}
+
+.branding__logo-desktop a:before{
+  content:"";
+  display:block;
+  width:0;
+  height:150%;
+}
+
+.branding__logo-mobile{
+  height:46px;
+  display:table-cell;
+  vertical-align:middle;
+  padding:0 20px 0 10px;
+}
+
+.branding__logo-mobile img{
+  width:100%;
+  height:100%;
+  max-width:200px;
+  min-height:30px;
+  display:block;
+  vertical-align:middle;
+}
+
+.branding__logo-mobile a{
+  width:100%;
+  height:100%;
+  text-decoration:none;
+  color:#f44;
+}
+
+.branding__logo-menu{
+  max-width:100px;
+  margin:0 auto;
+}
+
+.branding__logo-menu img{
+  width:100%;
+}
+
+.branding__logo-menu a{
+  text-decoration:none;
+  color:#f44;
+  display:block;
+  width:100%;
+  height:100%;
+  background-color:transparent;
+  border:0;
+  overflow:hidden;
+  *text-indent:-9999px;
+}
+
+.branding__logo-menu a:before{
+  content:"";
+  display:block;
+  width:0;
+  height:150%;
 }
 
 .browserupgrade{
@@ -605,6 +691,8 @@ table tbody tr:last-child td,table tbody tr:last-child th{
   padding:20px;
   background-color:#f44;
   color:#fff;
+  text-align:center;
+  font-family:Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,Helvetica Neue,Helvetica,sans-serif;
 }
 
 .browserupgrade a{
@@ -741,28 +829,28 @@ table tbody tr:last-child td,table tbody tr:last-child th{
   background:#fff;
 }
 
-.nav-bar{
+.navbar{
   background-color:#fff;
   padding:18px 0;
 }
 
-.nav-bar .wrapper{
+.navbar .wrapper{
   *zoom:1;
   margin:0 auto;
   padding:0 3.92857%;
 }
 
-.nav-bar .wrapper:after{
+.navbar .wrapper:after{
   content:"";
   display:table;
   clear:both;
 }
 
-.nav-bar button{
+.navbar button{
   background:#fff;
 }
 
-.nav-bar__flex-container{
+.navbar__flex-container{
   display:-ms-flexbox;
   display:flex;
   -ms-flex-direction:row;
@@ -1273,10 +1361,10 @@ table tbody tr:last-child td,table tbody tr:last-child th{
   .banner__heading,.info-panel__heading{
     font-size:3.125rem;
   }
-  .nav-bar{
+  .navbar{
     padding:0;
   }
-  .nav-bar .wrapper{
+  .navbar .wrapper{
     padding:0 1.42857%;
   }
   .site-nav__link{
@@ -1305,6 +1393,9 @@ table tbody tr:last-child td,table tbody tr:last-child th{
 @media (max-width:1050px){
   body:after{
     content:"at or below 1050px (desktop_large)";
+  }
+  .branding__logo-desktop{
+    max-width:155px;
   }
   .hero__heading{
     font-size:5rem;
