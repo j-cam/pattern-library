@@ -78,8 +78,9 @@ $radius: 0;
 ==============================================================================*/
 
 //---- Images
-$images_directory: '/assets/';
-
+$images_directory: '/assets/images/';
+$logo_url: '/assets/images/logo.png';
+$logo_horizontal_url: '/assets/images/logo.png';
 
 // $spritesmith_ImgName: '{{ "spritesheet.png" | asset_url }}';
 // $spritesmith_retinaImgName: '{{ "spritesheet.png" | asset_url }}';
@@ -174,8 +175,8 @@ $lightest_grey: #f5f4f4;
 
 //---- Named Colors
 
-$primary_color:   $red;
-$secondary_color: $grey;
+$primary_color:   $black;
+$secondary_color: $blue;
 $darkest:         #2c2c35;
 $lightest:        #fff;
 
