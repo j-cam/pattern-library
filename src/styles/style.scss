@@ -50,7 +50,6 @@
 @import "base/base";
 @import "base/headings";
 @import "base/lists";
-@import "base/links-btns";
 @import "base/forms";
 @import "base/tables";
 
@@ -95,7 +94,6 @@
   or child selectors to target those elements.
 
 ------------------------------------------- */
-@import "modules/nav";
 @import "modules/banner";
 @import "modules/branding";
 @import "modules/browserupgrade";
