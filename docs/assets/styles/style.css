@@ -378,6 +378,7 @@ h3,h4,h5,h6{
 ol,ul{
   padding:0;
 }
+
 input[type=email],input[type=password],input[type=search],input[type=text],input[type=url],textarea{
   font-family:inherit;
   border:1px solid inherit;
@@ -603,7 +604,7 @@ h1.branding__logo-desktop{
 }
 
 .branding__logo-desktop{
-  background-image:url('{{ "yip-navbar-logo.svg" | asset_url }}');
+  background-image:url(/assets/images/logo.png);
   background-repeat:no-repeat;
   background-position:0;
   background-size:contain;
@@ -616,7 +617,7 @@ h1.branding__logo-desktop{
 
 .branding__logo-desktop a{
   text-decoration:none;
-  color:#f44;
+  color:#2c2c35;
   display:block;
   width:100%;
   height:100%;
@@ -654,7 +655,7 @@ h1.branding__logo-desktop{
   width:100%;
   height:100%;
   text-decoration:none;
-  color:#f44;
+  color:#2c2c35;
 }
 
 .branding__logo-menu{
@@ -668,7 +669,7 @@ h1.branding__logo-desktop{
 
 .branding__logo-menu a{
   text-decoration:none;
-  color:#f44;
+  color:#2c2c35;
   display:block;
   width:100%;
   height:100%;
