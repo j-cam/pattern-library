@@ -92,6 +92,7 @@
 
   "patternPresentation": {
     "base" : "src/_pattern-presentation/",
+    "files" : "src/_pattern-presentation/prismjs/*.+(js|css)",
     "copy": [
       "src/_pattern-presentation/prismjs/*.+(js|css)"
     ],
