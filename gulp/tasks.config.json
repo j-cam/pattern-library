@@ -88,5 +88,13 @@
       "src/templates/modules/**/*.+(html|njk)"
     ],
     "dest" : "docs"
+  },
+
+  "patternPresentation": {
+    "base" : "src/_pattern-presentation/",
+    "copy": [
+      "src/_pattern-presentation/prismjs/*.+(js|css)"
+    ],
+    "dest" : "docs/assets/pattern-presentation/"
   }
 }

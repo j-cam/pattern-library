@@ -18,6 +18,7 @@ gulp.task('watch', function() {
   gulp.watch(config.styles.files, ['styles']);
   gulp.watch(config.scripts.files, ['scripts']);
   gulp.watch(config.templates.files , ['templates']);
+  gulp.watch(config.patternPresentation.files , ['pattern-presentation:copy']);
   gulp.watch(config.server.files, ['serve:reload']);
 
 });

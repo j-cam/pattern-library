@@ -11,7 +11,7 @@ gulp.task('default', function()
 {
     runSequence(
         [
-
+        'pattern-presentation:copy',
         'templates',
         'scripts',
         'scripts:copy',
@@ -29,6 +29,7 @@ gulp.task('build', function()
 {
     runSequence(
         [
+        'pattern-presentation:copy',
         'templates',
         'scripts',
         'scripts:copy',
