@@ -1314,7 +1314,7 @@ h1.branding__logo-desktop{
   color:#f44;
 }
 
-.tile__video-link-wrap{
+.tile__cta-link-wrap{
   width:100%;
   height:100%;
   display:table;
@@ -1325,23 +1325,34 @@ h1.branding__logo-desktop{
   left:0;
 }
 
-.tile__video-link,.tile__video-link-wrap{
+.tile__cta-link,.tile__cta-link-wrap{
   vertical-align:middle;
   text-align:center;
 }
 
-.tile__video-link{
+.tile__cta-link{
   display:table-cell;
   color:#fff;
   text-decoration:none;
   font-weight:700;
 }
 
-.tile__video-link:before{
+.tile__cta-link:before{
   content:"";
   display:block;
   margin:0 auto 10px;
   transition:.3s ease-in-out;
+}
+
+.tile__cta-link span{
+  border:1px solid #fff;
+  border-radius:3px;
+  padding:1em 2em;
+  transition:all .3s ease-in-out;
+}
+
+.tile__cta-link:hover span{
+  background-color:hsla(0,0%,100%,.3);
 }
 
 /*!
@@ -1485,11 +1496,11 @@ h1.branding__logo-desktop{
   .tile__table-cell--has-text{
     padding:8.57143%;
   }
-  .tile__video-link-wrap{
+  .tile__cta-link-wrap{
     display:block;
     padding:38% 0;
   }
-  .tile__video-link{
+  .tile__cta-link{
     display:block;
   }
 }

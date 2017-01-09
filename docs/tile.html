@@ -15,8 +15,9 @@
 
         <link href="//www.google-analytics.com" rel="dns-prefetch">
         <link href="//ajax.googleapis.com" rel="dns-prefetch">
-        <link href="assets/styles/style.css" rel="stylesheet">
 
+        <link href="assets/styles/style.css" rel="stylesheet">
+        <link href="assets/pattern-presentation/prism.css" rel="stylesheet">
         <script src="assets/scripts/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
 
@@ -96,6 +97,70 @@
     
 <div class="tiles">
 
+  <div class="tile__box">
+    <div class="tile__content-wrap">
+      <div class="tile__table">
+        <img
+            src="http://lorempixel.com/g/600/600/nightlife"
+            sizes="(min-width: 601px) 50vw, 100vw"
+            data-srcset="http://lorempixel.com/g/600/600/nightlife 700w,
+                    http://lorempixel.com/g/600/600/nightlife 1400w"
+            class="tile__image lazyload" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="tile__box tile__box--grey">
+    <div class="tile__content-wrap">
+      <div class="tile__table">
+        <span class="tile__table-cell tile__table-cell--has-text">
+              <span class="tile__number">#1</span>
+              <span class="tile__title">Tile Title</span>
+              <span class="tile__info">
+                Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts. Separated
+                they live in Bookmarksgrove right at the coast of the Semantics,
+                a large language ocean <a href="#">#TotallySquare</a>.
+              </span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tile__box tile__box--pink">
+    <div class="tile__content-wrap">
+      <div class="tile__table">
+        <span class="tile__table-cell tile__table-cell--has-text">
+              <span class="tile__number">#2</span>
+              <span class="tile__title">Another One</span>
+              <span class="tile__info">
+                Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts. Separated
+                they live in Bookmarksgrove right at the coast of the Semantics,
+                a large language ocean.
+              </span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="tile__box">
+    <div class="tile__content-wrap">
+      <div class="tile__cta-link-wrap">
+        <a class="tile__cta-link" href="#"><span>CTA LINK</span></a>
+      </div>
+      <div class="tile__table">
+        <img
+            src="http://lorempixel.com/g/600/600/business"
+            sizes="(min-width: 601px) 50vw, 100vw"
+            data-srcset="http://lorempixel.com/g/600/600/business 700w,
+                    http://lorempixel.com/g/600/600/business 1400w"
+            class="tile__image lazyload" alt="">
+      </div>
+    </div>
+  </div>
+
+</div><!-- end: .tiles -->
+<pre class="line-numbers"><code class="language-markup"><xmp>
+<div class="tiles">
 
   <div class="tile__box">
     <div class="tile__content-wrap">
@@ -106,7 +171,6 @@
             data-srcset="http://lorempixel.com/g/600/600/nightlife 700w,
                     http://lorempixel.com/g/600/600/nightlife 1400w"
             class="tile__image lazyload" alt="">
-
       </div>
     </div>
   </div>
@@ -114,26 +178,31 @@
     <div class="tile__content-wrap">
       <div class="tile__table">
         <span class="tile__table-cell tile__table-cell--has-text">
-
               <span class="tile__number">#1</span>
               <span class="tile__title">Tile Title</span>
-              <span class="tile__info">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. <a href="#">#HashTag</a>.</span>
-
+              <span class="tile__info">
+                Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts. Separated
+                they live in Bookmarksgrove right at the coast of the Semantics,
+                a large language ocean <a href="#">#TotallySquare</a>.
+              </span>
         </span>
       </div>
     </div>
   </div>
 
-
   <div class="tile__box tile__box--pink">
     <div class="tile__content-wrap">
       <div class="tile__table">
         <span class="tile__table-cell tile__table-cell--has-text">
-
               <span class="tile__number">#2</span>
-              <span class="tile__title">Title of<br>the tile</span>
-              <span class="tile__info">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</span>
-
+              <span class="tile__title">Another One</span>
+              <span class="tile__info">
+                Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts. Separated
+                they live in Bookmarksgrove right at the coast of the Semantics,
+                a large language ocean.
+              </span>
         </span>
       </div>
     </div>
@@ -141,7 +210,7 @@
   <div class="tile__box">
     <div class="tile__content-wrap">
       <div class="tile__video-link-wrap">
-        <a class="tile__video-link" href="#">play the video</a>
+        <a class="tile__video-link" href="#">CTA LINK</a>
       </div>
       <div class="tile__table">
         <img
@@ -150,70 +219,12 @@
             data-srcset="http://lorempixel.com/g/600/600/business 700w,
                     http://lorempixel.com/g/600/600/business 1400w"
             class="tile__image lazyload" alt="">
-
       </div>
     </div>
   </div>
 
-
-  <div class="tile__box">
-    <div class="tile__content-wrap">
-      <div class="tile__table">
-
-        <img
-            src="http://lorempixel.com/g/600/600/sports"
-            sizes="(min-width: 601px) 50vw, 100vw"
-            data-srcset="http://lorempixel.com/g/600/600/sports 700w,
-                    http://lorempixel.com/g/600/600/sports 1400w"
-            class="tile__image lazyload" alt="">
-
-      </div>
-    </div>
-  </div>
-  <div class="tile__box tile__box--blue">
-    <div class="tile__content-wrap">
-      <div class="tile__table">
-        <span class="tile__table-cell tile__table-cell--has-text">
-
-              <span class="tile__number">#3</span>
-              <span class="tile__title">Important Title</span>
-              <span class="tile__info">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</span>
-
-        </span>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="tile__box tile__box--grey">
-    <div class="tile__content-wrap">
-      <div class="tile__table">
-        <span class="tile__table-cell tile__table-cell--has-text">
-
-              <span class="tile__number">#5</span>
-              <span class="tile__title">Another One</span>
-              <span class="tile__info">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</span>
-
-        </span>
-      </div>
-    </div>
-  </div>
-  <div class="tile__box">
-    <div class="tile__content-wrap">
-      <div class="tile__table">
-
-        <img
-            src="http://lorempixel.com/g/600/600/people"
-            sizes="(min-width: 601px) 50vw, 100vw"
-            data-srcset="http://lorempixel.com/g/600/600/people 700w,
-                    http://lorempixel.com/g/600/600/people 1400w"
-            class="tile__image lazyload" alt="">
-
-      </div>
-    </div>
-  </div>
-
-</div>
+</div><!-- end: .tiles -->
+</xmp></code></pre>
 
 
 
@@ -268,7 +279,7 @@
         
         </ul>
     </div>
-
+    <script type="text/javascript" src="assets/pattern-presentation/prism.js"></script>
     <script type="text/javascript" src="assets/scripts/main.js"></script>
 
 
