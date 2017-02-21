@@ -1486,6 +1486,7 @@ h1.branding__logo-desktop{
   .tile__box{
     width:100%;
     height:auto;
+    display:list-item;
   }
   .tile__box:before{
     padding:0;

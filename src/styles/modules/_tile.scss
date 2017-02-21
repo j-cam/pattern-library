@@ -24,6 +24,7 @@
         @media ($below_tablet) {
           width: 100%;
           height: auto;
+          display: list-item;
           &:before {
             padding: 0;
           }
