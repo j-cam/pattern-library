@@ -57,7 +57,3 @@ storybook-static
 *.njsproj
 *.sln
 *.sw?
-
-# Legacy
-/docs/assets/maps
-/src/.DS_Store
