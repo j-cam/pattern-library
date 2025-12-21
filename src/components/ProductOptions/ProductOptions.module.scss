@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.product_options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &__group {
+    // Each group is an OptionSelector with its own styling
+    // No additional styles needed here
+  }
+}

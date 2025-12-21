@@ -172,6 +172,8 @@ $blue:          #86bed8;
 $white:         #fff;
 $black:         #2c2c35;
 $lightest_grey: #f5f4f4;
+$lighter_grey:  #e5e5e5;
+$dark_grey:     #333333;
 
 //---- Named Colors
 
@@ -179,6 +181,8 @@ $primary_color:   $black;
 $secondary_color: $blue;
 $darkest:         #2c2c35;
 $lightest:        #fff;
+$error_color:     $red;
+$success_color:   #2cde2c;
 
 /*  ================================================================
     Color Scheme

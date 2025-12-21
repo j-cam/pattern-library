@@ -1,0 +1,63 @@
+@import '../../styles/variables';
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+
+  &__to_top {
+    a {
+      color: $primary_color;
+      text-decoration: none;
+      font-weight: $fw_bold;
+      text-transform: lowercase;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__pages {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__previous,
+  &__next {
+    color: $primary_color;
+    text-decoration: none;
+    font-weight: $fw_bold;
+    padding: 0.5rem 1rem;
+    transition: opacity 0.2s;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &[aria-disabled='true'] {
+      opacity: 0.4;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+
+  &__page_of {
+    color: $body_txt_color;
+    font-weight: $fw_regular;
+    white-space: nowrap;
+  }
+}
+
+.desktop--show {
+  display: block;
+}
+
+.tablet-down--hide {
+  @media (max-width: $bp_tablet) {
+    display: none;
+  }
+}

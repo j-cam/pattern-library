@@ -1,0 +1,38 @@
+@import '../../styles/variables';
+
+.section-nav {
+  display: block;
+  padding: 1rem 0;
+  border-bottom: 1px solid $border_color;
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 2rem;
+    justify-content: center;
+
+    @media (max-width: $bp_mobile_large) {
+      gap: 0.5rem 1rem;
+    }
+  }
+
+  &__link {
+    color: $body_txt_color;
+    text-decoration: none;
+    font-weight: $fw_regular;
+    text-transform: lowercase;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $primary_color;
+    }
+
+    &.active {
+      font-weight: $fw_bold;
+      border-bottom-color: $primary_color;
+      color: $primary_color;
+    }
+  }
+}

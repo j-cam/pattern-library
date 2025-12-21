@@ -1,0 +1,131 @@
+@import '../../styles/variables';
+
+.option_selector {
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  &__legend {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: $dark_grey;
+    margin-bottom: 0.75rem;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  &__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  &--color {
+    gap: 0.5rem;
+  }
+
+  &--size {
+    gap: 0.5rem;
+  }
+}
+
+.option {
+  position: relative;
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + .option__label {
+      border-color: $primary_color;
+      box-shadow: 0 0 0 2px $primary_color;
+    }
+
+    &:disabled + .option__label {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    &:focus-visible + .option__label {
+      outline: 2px solid $primary_color;
+      outline-offset: 2px;
+    }
+  }
+
+  &__label {
+    display: block;
+    cursor: pointer;
+    border: 2px solid $border_color;
+    border-radius: 4px;
+    transition: all 0.2s;
+    background: $white;
+
+    &:hover {
+      border-color: $primary_color;
+    }
+  }
+
+  &__image_wrap {
+    display: block;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__text {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-weight: $fw_regular;
+    font-size: 0.9375rem;
+    min-width: 60px;
+    text-align: center;
+  }
+
+  &--unavailable {
+    .option__label {
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: $red;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+// Color variant adjustments
+.option_selector--color {
+  .option__label {
+    padding: 0;
+    border-width: 3px;
+  }
+
+  .option__image_wrap {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+// Size variant adjustments
+.option_selector--size {
+  .option__text {
+    min-width: 70px;
+    font-weight: $fw_medium;
+  }
+}

@@ -1,0 +1,70 @@
+@import '../../styles/variables';
+
+.collection {
+  display: block;
+  margin: 2rem 0;
+
+  &__caption {
+    text-align: center;
+    margin: 0 0 2rem 0;
+    font-size: 2rem;
+    font-weight: $fw_bold;
+    text-transform: lowercase;
+    color: $body_txt_color;
+  }
+
+  &__grid {
+    display: grid;
+    width: 100%;
+
+    // Column variations
+    &--cols-2 {
+      grid-template-columns: repeat(2, 1fr);
+
+      @media (max-width: $bp_mobile_large) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &--cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+
+      @media (max-width: $bp_tablet) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: $bp_mobile_large) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &--cols-4 {
+      grid-template-columns: repeat(4, 1fr);
+
+      @media (max-width: $bp_desktop_small) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: $bp_tablet) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: $bp_mobile_large) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    // Gap variations
+    &--gap-sm {
+      gap: 1rem;
+    }
+
+    &--gap-md {
+      gap: 2rem;
+    }
+
+    &--gap-lg {
+      gap: 3rem;
+    }
+  }
+}
