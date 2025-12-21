@@ -1,0 +1,62 @@
+@import '../../styles/variables';
+
+.banner {
+  display: block;
+  position: relative;
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border: 0;
+    vertical-align: bottom;
+    zoom: 1;
+  }
+
+  &__caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    overflow-y: hidden;
+  }
+
+  &__heading {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 5%;
+    margin: 0 auto;
+    font-weight: $fw_bold;
+    font-size: 6.125rem; // ~98px
+    font-family: $sans;
+    line-height: 1;
+
+    @media (max-width: $bp_desktop_xlarge) {
+      font-size: 4.375rem; // ~70px
+    }
+
+    @media (max-width: $bp_desktop_small) {
+      font-size: 3.75rem; // ~60px
+    }
+
+    @media (max-width: $bp_tablet) {
+      font-size: 3.125rem; // ~50px
+    }
+
+    @media (max-width: $bp_mobile_xlarge) {
+      padding: 0 5%;
+      font-size: 2.5rem; // ~40px
+    }
+
+    @media (max-width: $bp_mobile_medium) {
+      font-size: 2rem; // ~32px
+    }
+  }
+}

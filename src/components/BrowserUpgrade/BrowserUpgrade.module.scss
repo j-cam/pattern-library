@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+
+.browserupgrade {
+  margin: 0;
+  display: block;
+  padding: 20px;
+  background-color: $red;
+  color: #fff;
+  text-align: center;
+  font-family: $sans;
+
+  a {
+    color: #fff;
+    font-weight: $fw_bold;
+    text-decoration: underline;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

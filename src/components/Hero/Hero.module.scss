@@ -1,0 +1,57 @@
+@import '../../styles/variables';
+
+.hero {
+  display: block;
+  position: relative;
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border: 0;
+    vertical-align: bottom;
+    zoom: 1;
+  }
+
+  &__caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    overflow-y: hidden;
+  }
+
+  &__heading {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    max-width: 1050px;
+    padding: 0 8%;
+    margin: 0 auto;
+    line-height: 1;
+    font-weight: $fw_bold;
+    font-size: 6.125rem; // ~98px
+    font-family: $sans;
+
+    @media (max-width: $bp_desktop_large) {
+      font-size: 5rem; // ~80px
+    }
+
+    @media (max-width: $bp_desktop) {
+      font-size: 3.75rem; // ~60px
+    }
+
+    @media (max-width: $bp_mobile_large) {
+      font-size: 3rem; // ~48px
+    }
+
+    @media (max-width: $bp_mobile_medium) {
+      font-size: 2.5rem; // ~40px
+    }
+  }
+}

@@ -1,22 +1,42 @@
 {
-  "name": "pattern-library",
-  "version": "1.0.0",
-  "description": "A beginning point for fron-end projects.",
-  "main": "index.js",
+  "name": "@j-cam/pattern-library",
+  "version": "2.0.0",
+  "description": "A modern React component library with Storybook",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "test"
+    "dev": "storybook dev -p 6006",
+    "build": "tsc && vite build",
+    "build-storybook": "storybook build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
     "url": "git+https://j-cam@github.com/j-cam/pattern-library.git"
   },
   "keywords": [
-    "boilerplate",
-    "scss",
-    "css",
-    "html",
-    "smacss",
-    "bem"
+    "react",
+    "components",
+    "component-library",
+    "typescript",
+    "storybook",
+    "ui",
+    "design-system"
   ],
   "author": "Jamie Campbell",
   "license": "GPL-2.0",
@@ -24,37 +44,34 @@
     "url": "https://github.com/j-cam/pattern-library/issues"
   },
   "homepage": "https://github.com/j-cam/pattern-library#readme",
-  "devDependencies": {
-    "autoprefixer": "^6.2.3",
-    "browser-sync": "^2.7.13",
-    "css-mqpacker": "^4.0.0",
-    "del": "^2.0.2",
-    "gulp": "^3.9.0",
-    "gulp-cache": "^0.3.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-cssnano": "^2.1.0",
-    "gulp-if": "^1.2.5",
-    "gulp-imagemin": "^2.3.0",
-    "gulp-include": "^2.1.0",
-    "gulp-newer": "^0.5.1",
-    "gulp-nunjucks-render": "^1.0.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-postcss": "^6.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.0.3",
-    "gulp-size": "^2.0.0",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp-uglify": "^1.4.1",
-    "gulp-util": "^3.0.6",
-    "gulp-watch": "^4.3.5",
-    "gulp.spritesmith": "^6.0.1",
-    "postcss-browser-reporter": "^0.4.0",
-    "require-dir": "^0.3.0",
-    "run-sequence": "^1.1.4",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
-  "dependencies": {
-    "jquery": "^2.1.4"
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
+    "@storybook/addon-links": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/react": "^8.4.7",
+    "@storybook/react-vite": "^8.4.7",
+    "@storybook/test": "^8.4.7",
+    "@types/node": "^25.0.3",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@typescript-eslint/eslint-plugin": "^8.15.0",
+    "@typescript-eslint/parser": "^8.15.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.15.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "eslint-plugin-storybook": "^0.11.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sass": "^1.81.0",
+    "storybook": "^8.4.7",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.1",
+    "vite-plugin-dts": "^4.3.0"
   }
 }
