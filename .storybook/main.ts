@@ -14,6 +14,13 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
+  viteFinal: async (config) => {
+    // Set base URL for GitHub Pages deployment
+    if (process.env.NODE_ENV === 'production') {
+      config.base = '/pattern-library/';
+    }
+    return config;
+  },
 };
 
 export default config;

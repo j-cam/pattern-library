@@ -2,6 +2,12 @@
 
 A modern React component library built with TypeScript, Vite, and Storybook. This library provides a collection of reusable UI components for building web applications.
 
+## 📖 Documentation
+
+**[View Storybook Documentation](https://j-cam.github.io/pattern-library/)**
+
+Explore all components interactively with live examples, props documentation, and usage guidelines.
+
 ## Features
 
 - 🚀 Built with **React 18** and **TypeScript**
